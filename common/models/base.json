@@ -1,0 +1,48 @@
+{
+  "name": "Base",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "services": {
+      "type": "hasMany",
+      "model": "Service",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "place": {
+      "type": "belongsTo",
+      "model": "Place",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Service",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "base": {
+      "type": "belongsTo",
+      "model": "Base",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "routes": {
+      "type": "hasMany",
+      "model": "Route",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

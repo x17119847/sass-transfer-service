@@ -1,0 +1,45 @@
+{
+  "name": "VehicleType",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "max_pax": {
+      "type": "number",
+      "required": true,
+      "default": 1
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "vehicles": {
+      "type": "hasMany",
+      "model": "Vehicle",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

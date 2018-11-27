@@ -1,0 +1,44 @@
+{
+  "name": "PaxType",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "pax_from": {
+      "type": "number",
+      "required": true
+    },
+    "pax_to": {
+      "type": "number",
+      "required": true
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "routePrices": {
+      "type": "hasMany",
+      "model": "RoutePrice",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

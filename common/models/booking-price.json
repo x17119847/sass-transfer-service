@@ -1,0 +1,43 @@
+{
+  "name": "BookingPrice",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "vehicle_cost": {
+      "type": "number"
+    },
+    "driver_cost": {
+      "type": "number"
+    },
+    "sale": {
+      "type": "number",
+      "required": true
+    },
+    "paid": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "booking": {
+      "type": "belongsTo",
+      "model": "Booking",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

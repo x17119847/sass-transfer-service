@@ -1,0 +1,90 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "db"
+  },
+  "AccessToken": {
+    "dataSource": "db",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "db",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "db",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "db",
+    "public": false
+  },
+  "VehicleType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Vehicle": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Company": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Base": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Service": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Route": {
+    "dataSource": "db",
+    "public": true
+  },
+  "RoutePrice": {
+    "dataSource": "db",
+    "public": true
+  },
+  "PaxType": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Driver": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Customer": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Booking": {
+    "dataSource": "db",
+    "public": true
+  },
+  "BookingPrice": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Place": {
+    "dataSource": "db",
+    "public": true
+  }
+}

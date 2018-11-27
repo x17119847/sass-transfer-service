@@ -1,0 +1,51 @@
+{
+  "name": "Route",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "distance": {
+      "type": "number"
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "service": {
+      "type": "belongsTo",
+      "model": "Service",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "bookings": {
+      "type": "hasMany",
+      "model": "Booking",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "place": {
+      "type": "belongsTo",
+      "model": "Place",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

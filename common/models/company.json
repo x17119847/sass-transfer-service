@@ -1,0 +1,75 @@
+{
+  "name": "Company",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "required": true
+    },
+    "password": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "vehicles": {
+      "type": "hasMany",
+      "model": "Vehicle",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "vehicleTypes": {
+      "type": "hasMany",
+      "model": "VehicleType",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "bases": {
+      "type": "hasMany",
+      "model": "Base",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "paxTypes": {
+      "type": "hasMany",
+      "model": "PaxType",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "drivers": {
+      "type": "hasMany",
+      "model": "Driver",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

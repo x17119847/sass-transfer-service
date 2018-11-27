@@ -1,0 +1,64 @@
+{
+  "name": "Booking",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "ref": {
+      "type": "string",
+      "required": true
+    },
+    "booking_date": {
+      "type": "date",
+      "required": true
+    },
+    "service_date_time": {
+      "type": "date",
+      "required": true
+    },
+    "complete": {
+      "type": "boolean",
+      "required": true,
+      "default": false
+    }
+  },
+  "validations": [],
+  "relations": {
+    "customer": {
+      "type": "belongsTo",
+      "model": "Customer",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "driver": {
+      "type": "belongsTo",
+      "model": "Driver",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "vehicle": {
+      "type": "belongsTo",
+      "model": "Vehicle",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "route": {
+      "type": "belongsTo",
+      "model": "Route",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

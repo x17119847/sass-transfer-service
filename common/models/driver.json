@@ -1,0 +1,46 @@
+{
+  "name": "Driver",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "dob": {
+      "type": "date"
+    },
+    "cost_per_hour": {
+      "type": "number"
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "bookings": {
+      "type": "hasMany",
+      "model": "Booking",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Place",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "placeId": {
+      "type": "string",
+      "required": true
+    },
+    "google_place_id": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "bases": {
+      "type": "hasMany",
+      "model": "Base",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "routes": {
+      "type": "hasMany",
+      "model": "Route",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

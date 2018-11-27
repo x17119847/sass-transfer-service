@@ -1,0 +1,51 @@
+{
+  "name": "Vehicle",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "registration": {
+      "type": "string"
+    },
+    "active": {
+      "type": "boolean",
+      "required": true,
+      "default": true
+    }
+  },
+  "validations": [],
+  "relations": {
+    "company": {
+      "type": "belongsTo",
+      "model": "Company",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "vehicleType": {
+      "type": "belongsTo",
+      "model": "VehicleType",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "bookings": {
+      "type": "hasMany",
+      "model": "Booking",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    }
+  },
+  "acls": [],
+  "methods": {}
+}

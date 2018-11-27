@@ -1,0 +1,7 @@
+{
+  "db": {
+    "url": "mongodb://sass-transfer-service-user:Rfrp2711!@ds115874.mlab.com:15874/sass-transfer-service",
+    "name": "db",
+    "connector": "loopback-connector-mongodb"
+  }
+}
