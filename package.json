@@ -11,7 +11,7 @@
     "start": "node .",
     "posttest": "npm run lint",
     "test": "node ./node_modules/mocha/bin/mocha",
-    "ci": "start-server-and-test start-server http://localhost:3000 test"
+    "ci": "start-server-and-test start-server http://localhost:3001 test"
   },
   "dependencies": {
     "axios": "^0.18.0",
