@@ -8,7 +8,7 @@
   "properties": {
     "name": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "email": {
       "type": "string",
@@ -16,10 +16,11 @@
     },
     "password": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "phone": {
-      "type": "string"
+      "type": "string",
+      "required": false
     },
     "active": {
       "type": "boolean",
@@ -68,23 +69,8 @@
       "options": {
         "nestRemoting": true
       }
-    },
-    "user": {
-      "type": "belongsTo",
-      "model": "User",
-      "foreignKey": "",
-      "options": {
-        "nestRemoting": true
-      }
     }
   },
-  "acls": [
-    {
-      "accessType": "*",
-      "principalType": "ROLE",
-      "principalId": "$unauthenticated",
-      "permission": "DENY"
-    }
-  ],
+  "acls": [],
   "methods": {}
 }
