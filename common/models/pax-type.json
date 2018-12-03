@@ -6,13 +6,10 @@
     "validateUpsert": true
   },
   "properties": {
-    "pax_from": {
+    "paxType": {
       "type": "number",
-      "required": true
-    },
-    "pax_to": {
-      "type": "number",
-      "required": true
+      "required": true,
+      "default": 2
     },
     "active": {
       "type": "boolean",

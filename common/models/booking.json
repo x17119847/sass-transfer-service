@@ -57,6 +57,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "company": {
+      "type": "belongsTo",
+      "model": "Route",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],
