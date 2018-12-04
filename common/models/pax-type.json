@@ -6,10 +6,19 @@
     "validateUpsert": true
   },
   "properties": {
-    "paxType": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "age_from": {
       "type": "number",
       "required": true,
-      "default": 2
+      "default": 0
+    },
+    "age_to": {
+      "type": "number",
+      "required": true,
+      "default": 0
     },
     "active": {
       "type": "boolean",
