@@ -85,6 +85,22 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "services": {
+      "type": "hasMany",
+      "model": "Service",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
+    },
+    "routes": {
+      "type": "hasMany",
+      "model": "Route",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],
