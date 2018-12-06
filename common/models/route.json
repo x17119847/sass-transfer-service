@@ -52,6 +52,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "routePrices": {
+      "type": "hasMany",
+      "model": "RoutePrice",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],

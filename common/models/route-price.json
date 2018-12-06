@@ -25,6 +25,14 @@
       "options": {
         "nestRemoting": true
       }
+    },
+    "route": {
+      "type": "belongsTo",
+      "model": "Route",
+      "foreignKey": "",
+      "options": {
+        "nestRemoting": true
+      }
     }
   },
   "acls": [],
