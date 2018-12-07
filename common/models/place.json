@@ -6,17 +6,21 @@
     "validateUpsert": true
   },
   "properties": {
-    "placeId": {
-      "type": "string",
-      "required": true
-    },
     "google_place_id": {
       "type": "string",
-      "required": true
+      "required": false
     },
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
+    },
+    "countryCode": {
+      "type": "string"
+    },
+    "countyId": {
+      "type": "string"
+    },
+    "countyName": {
+      "type": "string"
     }
   },
   "validations": [],
