@@ -9,13 +9,14 @@
     "start-server": "npm start",
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint",
+    "posttest": "",
     "test": "node ./node_modules/mocha/bin/mocha",
     "ci": "start-server-and-test start-server http://localhost:3001 test"
   },
   "dependencies": {
     "axios": "^0.18.0",
     "chai": "^4.2.0",
+    "chai-http": "^4.2.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "eslint": "^5.9.0",
