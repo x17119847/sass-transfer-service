@@ -1,6 +1,8 @@
 {
-  "name": "sass-transfer-service",
+  "name": "sass-transfer-service-api",
   "version": "1.0.0",
+  "description": "sass-transfer-service",
+  "author": "NCI Student number: 17119847",
   "main": "server/server.js",
   "engines": {
     "node": ">=4"
@@ -34,9 +36,9 @@
     "start-server-and-test": "^1.7.11"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/x17119847/sass-transfer-service-api"
   },
-  "license": "UNLICENSED",
-  "description": "sass-transfer-service"
+  "homepage": "https://github.com/x17119847/sass-transfer-service-api",
+  "license": "UNLICENSED"
 }
